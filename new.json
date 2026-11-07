@@ -1,0 +1,10 @@
+[
+    {"study_hours": 1, "attendance": 50, "result": 0},
+    {"study_hours": 2, "attendance": 55, "result": 0},
+    {"study_hours": 3, "attendance": 65, "result": 0},
+    {"study_hours": 4, "attendance": 70, "result": 1},
+    {"study_hours": 5, "attendance": 80, "result": 1},
+    {"study_hours": 6, "attendance": 90, "result": 1},
+    {"study_hours": 7, "attendance": 92, "result": 1},
+    {"study_hours": 8, "attendance": 95, "result": 1}
+]

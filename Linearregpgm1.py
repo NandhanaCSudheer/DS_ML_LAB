@@ -1,0 +1,28 @@
+import numpy as np 
+import matplotlib.pyplot as plt 
+from sklearn.linear_model import LinearRegression 
+
+X = np.array([1, 2, 3, 4, 5]).reshape(-1, 1) 
+y = np.array([30, 35, 40, 45, 50]) 
+model = LinearRegression() 
+model.fit(X, y) 
+y_pred = model.predict(X) 
+print("Slope:", model.coef_[0]) 
+print("Intercept:", model.intercept_) 
+print("Linear Regression Equation:") 
+print(f"y = {model.coef_[0]:.2f}x + {model.intercept_:.2f}") 
+prediction = model.predict([[6]]) 
+print("Predicted salary:", prediction[0]) 
+plt.figure() 
+plt.scatter(X, y) 
+plt.xlabel("Years of Experience") 
+plt.ylabel("Salary") 
+plt.title("Actual Data") 
+plt.show() 
+plt.figure() 
+plt.scatter(X, y) 
+plt.plot(X, y_pred) 
+plt.xlabel("Years of Experience") 
+plt.ylabel("Salary") 
+plt.title("Linear Regression") 
+plt.show() 
