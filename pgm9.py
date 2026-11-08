@@ -39,3 +39,18 @@ plt.title("Actual Class")
 plt.xlabel("Petal length")
 plt.ylabel("Petal width")
 plt.show()
+
+k_values = range(1, 8) 
+accuracies = [] 
+for value in k_values: 
+    model = KNeighborsClassifier(n_neighbors=value) 
+    model.fit(X_train, y_train) 
+    pred = model.predict(X_test) 
+    acc = accuracy_score(y_test, pred) * 100 
+    accuracies.append(acc) 
+plt.plot(k_values, accuracies, marker="o") 
+plt.xlabel("K Value") 
+plt.ylabel("Accuracy (%)") 
+plt.title("KNN Accuracy Graph") 
+plt.xticks(k_values) 
+plt.show() 

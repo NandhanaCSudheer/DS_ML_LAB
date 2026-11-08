@@ -41,12 +41,14 @@ plt.legend()
 plt.show()
 
 plt.subplot(1,2,1)
-plt.scatter(data["Study_hours"],data["attendance_percentage"],color = "red", marker = "*")
+plt.scatter(X_test["Study_hours"], X_test["attendance_percentage"],
+            c=pd.factorize(y_pred)[0],cmap="coolwarm", marker = "*")
 plt.title("Predicted Class")
 plt.xlabel("Study Hours")
 plt.ylabel("Attendance Percentage")
 plt.subplot(1,2,2)
-plt.scatter(data["Study_hours"],data["attendance_percentage"],color = "blue", marker = "^")
+plt.scatter(X_test["Study_hours"], X_test["attendance_percentage"],
+            c=pd.factorize(y_test)[0],cmap="coolwarm", marker = "^")
 plt.title("Actual Class")
 plt.xlabel("Study Hours")
 plt.ylabel("Attendance Percentage")

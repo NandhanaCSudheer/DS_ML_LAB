@@ -21,7 +21,7 @@ print("Accuracy score: ",accuracy_score(y_test,y_pred))
 print("Confusion matrix: ",confusion_matrix(y_test,y_pred))
 print("Classification report: ",classification_report(y_test,y_pred))
 
-display = ConfusionMatrixDisplay( confusion_matrix=cm, display_labels=data.target_names ) 
+display = ConfusionMatrixDisplay( confusion_matrix=cm, display_labels=data.target_names) 
 display.plot(cmap="Blues") 
 plt.title("Decision Tree - Confusion Matrix") 
 plt.show() 

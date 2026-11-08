@@ -1,6 +1,5 @@
 from sklearn.datasets import load_iris
 from sklearn.cluster import KMeans
-from sklearn.metrics import accuracy_score,confusion_matrix,classification_report
 from sklearn.metrics import silhouette_score
 import matplotlib.pyplot as plt
 
