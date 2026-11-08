@@ -29,6 +29,8 @@ y_pred = model.predict(X_test)
 # Best fit line
 print("Slope:", model.coef_[0])
 print("Intercept:", model.intercept_)
+print("Linear Equation is: ")
+print(f"y = {model.coef_[0]:.2f}x + {model.intercept_}")
 
 # Predict salary for new experience
 sample = pd.DataFrame({"YearsExperience": [5]})
